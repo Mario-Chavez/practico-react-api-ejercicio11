@@ -42,7 +42,9 @@ function App() {
                 <h1 className="display-4 text-center">Practico ReactJS ejercicio 10</h1>
                 <hr />
                 <Buscador categoria={busquedaCategoria} />
-                <CardNoticias noticias={noticias} />
+                <section className="row justify-content-evenly mt-5">
+                    <CardNoticias noticias={noticias} />
+                </section>
             </Container>
             <footer className="bg-dark text-light text-center py-5">
                 <p> &copy; Todos los derechos reservados</p>

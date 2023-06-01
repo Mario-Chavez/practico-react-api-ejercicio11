@@ -7,7 +7,7 @@ const CardNoticias = ({ noticias }) => {
             {noticias.map((naticias, index) => (
                 <Card key={index} className="my-3 cards col-lg-3 col-md-4 m-1 ">
                     <Card.Body>
-                        <div className="d-flex">
+                        <div className="d-flex ">
                             <Card.Title className=" mx-auto">{naticias.title}</Card.Title>
                         </div>
                         <hr />
@@ -27,7 +27,11 @@ const CardNoticias = ({ noticias }) => {
                         </div>
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-center">
-                        <Button className="col-7 botonFormulario" variant="danger">
+                        <Button
+                            className="col-7 botonFormulario"
+                            variant="danger"
+                            onClick={noticias.url}
+                        >
                             Borrar
                         </Button>
                     </Card.Footer>
