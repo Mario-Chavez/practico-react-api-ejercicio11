@@ -17,18 +17,6 @@ function App() {
         busquedaCategoria();
     }, []);
 
-    // const consultarApi = async () => {
-    //     try {
-    //         const resp = await fetch(
-    //             ` https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
-    //         );
-    //         const dato = await resp.json();
-    //         setNoticias(dato.articles);
-    //         console.log(noticias);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
     const busquedaCategoria = async (category) => {
         category === undefined ? setMostrarTitulo(true) : setMostrarTitulo(false);
 
