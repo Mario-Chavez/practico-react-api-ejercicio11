@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
+import foto from "../assets/Image_not_available.png";
 
 const CardNoticias = ({ noticias }) => {
     return (
@@ -11,12 +12,20 @@ const CardNoticias = ({ noticias }) => {
                         <div className="d-flex ">
                             <Card.Title className=" mx-auto">{naticias.title}</Card.Title>
                         </div>
+                        <Card.Text className="d-flex justify-content-end text-danger">
+                            {" "}
+                            {naticias.author}
+                        </Card.Text>
                         <hr />
                         <div className="my-4">
-                            <Card.Img
-                                src={naticias.urlToImage}
-                                className="mx-auto d-block"
-                            />
+                            {!naticias.urlToImage ? (
+                                <Card.Img src={foto} className="mx-auto d-block" />
+                            ) : (
+                                <Card.Img
+                                    src={naticias.urlToImage}
+                                    className="mx-auto d-block"
+                                />
+                            )}
                             <Card.Text className="my-3">
                                 Description :{" "}
                                 <span className="p-1"> {naticias.description}</span>
