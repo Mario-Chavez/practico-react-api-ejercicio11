@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { ArrowRight } from "react-bootstrap-icons";
 
 const CardNoticias = ({ noticias }) => {
     return (
@@ -28,11 +29,13 @@ const CardNoticias = ({ noticias }) => {
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-center">
                         <Button
-                            className="col-7 botonFormulario"
-                            variant="danger"
-                            onClick={noticias.url}
+                            className="col-7 btn btn-outline-primary"
+                            variant=""
+                            onClick={() => {
+                                window.open(naticias.url, "_blank");
+                            }}
                         >
-                            Borrar
+                            Ver Mas <ArrowRight />
                         </Button>
                     </Card.Footer>
                 </Card>
