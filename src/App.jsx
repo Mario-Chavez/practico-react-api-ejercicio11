@@ -54,7 +54,7 @@ function App() {
                 <Buscador categoria={busquedaCategoria} />
                 {titulo === true ? <TituloDeBusqueda /> : ""}
                 {mostrarSpiner ? (
-                    <div className="my-5 mx-auto">
+                    <div className="my-5 p-4 text-center">
                         <Spinner
                             animation="border"
                             role="status"
