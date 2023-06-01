@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form";
 import { ArrowRight } from "react-bootstrap-icons";
 
 const Buscador = ({ categoria }) => {
-    const [category, setSearchCategory] = useState("");
-
     const {
         register,
         handleSubmit,
@@ -14,7 +12,6 @@ const Buscador = ({ categoria }) => {
     } = useForm();
 
     const onSubmit = (data) => {
-        // console.log(data.categoria);
         categoria(data.categoria);
         reset();
     };
