@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 const TituloDeBusqueda = () => {
     return (
-        <Container>
-            <Row>
+        <Container className="container">
+            <Row className="p-4 text-center">
                 <Col>
-                    <h1>Busca la categoría de noticias que quieras ver</h1>
+                    <h3>Busca la categoría de noticias que quieras ver</h3>
                 </Col>
             </Row>
         </Container>
