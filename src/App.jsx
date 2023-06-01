@@ -3,9 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import Buscador from "./components/Buscador";
+import CardNoticias from "./components/cardNoticias";
+
+const API_KEY = "8e50655ccb6b4e7a81dcf4926b6527bb";
 
 function App() {
-    const [personaje, setPersonaje] = useState({});
+    const [noticias, setNoticias] = useState([]);
     const [mostrarSpiner, setMostrarSpiner] = useState(true);
 
     useEffect(() => {
@@ -13,19 +16,24 @@ function App() {
     }, []);
 
     const consultarApi = async () => {
-        /* realizamos una peticion get a la API */
         try {
-            setMostrarSpiner(true);
             const resp = await fetch(
-                "https://newsapi.org/v2/everything?q=bitcoin&apiKey=8e50655ccb6b4e7a81dcf4926b6527bb"
+                ` https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
             );
             const dato = await resp.json();
-            console.log(dato);
-            // setPersonaje(dato[0]);
-            //  setMostrarSpiner(false)
+            setNoticias(dato.articles);
+            console.log(noticias);
         } catch (error) {
             console.log(error);
         }
+    };
+    const busquedaCategoria = async (category) => {
+        console.log(category);
+        const resp = await fetch(
+            `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${API_KEY} `
+        );
+        const dato = await resp.json();
+        console.log(dato);
     };
 
     return (
@@ -33,8 +41,8 @@ function App() {
             <Container className="my-5 mainPage">
                 <h1 className="display-4 text-center">Practico ReactJS ejercicio 10</h1>
                 <hr />
-
-                <Buscador />
+                <Buscador categoria={busquedaCategoria} />
+                <CardNoticias noticias={noticias} />
             </Container>
             <footer className="bg-dark text-light text-center py-5">
                 <p> &copy; Todos los derechos reservados</p>
