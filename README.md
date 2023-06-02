@@ -1,6 +1,14 @@
-# Practica de React ejercicio 11
+# Proyecto de Consumo de API de Noticias en ReactJs
 
-¡Bienvenido(a) al proyecto de trabajo en React! En este documento encontrarás información importante sobre cómo configurar, ejecutar y contribuir a este proyecto.
+Este proyecto es una página web que consume una API de noticias y muestra las noticias en tarjetas en la pantalla. Utiliza tecnologías como React.js, React Bootstrap y Bootstrap para el desarrollo de la interfaz de usuario.
+
+## Características
+
+-   Consume una API de noticias para obtener los datos de las noticias.
+-   Tiene una barra de busqueda para buscar por categoria de noticias.
+-   Muestra las noticias en tarjetas (cards) en la pantalla.
+-   Cada tarjeta muestra el título, descripción y una imagen de la noticia.
+-   Permite hacer clic en una tarjeta para ver más detalles de la noticia.
 
 ## Requisitos previos
 
