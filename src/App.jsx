@@ -36,12 +36,8 @@ function App() {
                 <h1 className="display-4 text-center">Practico ReactJS ejercicio 11</h1>
                 <hr />
                 <Buscador categoria={busquedaCategoria} />
-
-                {noticias.length > 0 ? (
-                    <section className="row justify-content-evenly mt-5">
-                        <CardNoticias noticias={noticias} />
-                    </section>
-                ) : isLoading ? (
+                <TituloDeBusqueda />
+                {isLoading ? (
                     <div className="my-5 p-4 text-center">
                         <Spinner
                             animation="border"
@@ -50,7 +46,9 @@ function App() {
                         ></Spinner>
                     </div>
                 ) : (
-                    <TituloDeBusqueda />
+                    <section className="row justify-content-evenly mt-5">
+                        <CardNoticias noticias={noticias} />
+                    </section>
                 )}
             </Container>
             <footer className="bg-dark text-light text-center py-5">
