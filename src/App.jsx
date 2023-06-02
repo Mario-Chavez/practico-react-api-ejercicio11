@@ -36,7 +36,7 @@ function App() {
     return (
         <>
             <Container className="my-5 mainPage">
-                <h1 className="display-4 text-center">Practico ReactJS ejercicio 10</h1>
+                <h1 className="display-4 text-center">Practico ReactJS ejercicio 11</h1>
                 <hr />
                 <Buscador categoria={busquedaCategoria} />
                 {titulo === true ? <TituloDeBusqueda /> : ""}
