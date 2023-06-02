@@ -15,10 +15,11 @@ function App() {
     const [titulo, setMostrarTitulo] = useState(true);
 
     useEffect(() => {
-        busquedaCategoria();
+        // busquedaCategoria();
     }, []);
 
     const busquedaCategoria = async (category) => {
+        console.log(category);
         category === undefined ? setMostrarTitulo(true) : setMostrarTitulo(false);
 
         try {
