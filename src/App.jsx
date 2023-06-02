@@ -14,9 +14,7 @@ function App() {
     const [mostrarSpiner, setMostrarSpiner] = useState(true);
     const [titulo, setMostrarTitulo] = useState(true);
 
-    useEffect(() => {
-        // busquedaCategoria();
-    }, []);
+    useEffect(() => {}, [noticias]);
 
     const busquedaCategoria = async (category) => {
         console.log(category);
