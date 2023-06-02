@@ -53,12 +53,5 @@ const CardNoticias = ({ noticias }) => {
         </>
     );
 };
-//  <div className="my-5 p-4 text-center">
-//       <Spinner
-//           animation="border"
-//           role="status"
-//           variant="primary"
-//       ></Spinner>
-//   </div>
 
 export default CardNoticias;
