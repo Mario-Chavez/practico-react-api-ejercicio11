@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Spinner } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import Buscador from "./components/Buscador";
-import CardNoticias from "./components/cardNoticias";
+// import CardNoticias from "./components/cardNoticias";
+import CardNoticias from "./components/CardNoticias.jsx";
 import TituloDeBusqueda from "./components/TituloDeBusqueda";
 
 const API_KEY = "8e50655ccb6b4e7a81dcf4926b6527bb";
