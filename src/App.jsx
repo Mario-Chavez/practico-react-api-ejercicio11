@@ -11,16 +11,20 @@ const API_KEY = "8e50655ccb6b4e7a81dcf4926b6527bb";
 
 function App() {
     const [noticias, setNoticias] = useState([]) || [];
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {}, [noticias]);
 
     const busquedaCategoria = async (category) => {
         try {
+            setIsLoading(true);
             const resp = await fetch(
                 `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${API_KEY} `
             );
             const dato = await resp.json();
-            setNoticias(dato.articles);
+
+            setNoticias(...noticias, dato.articles);
+            setIsLoading(false);
         } catch (error) {
             console.log(error);
         }
@@ -37,6 +41,14 @@ function App() {
                     <section className="row justify-content-evenly mt-5">
                         <CardNoticias noticias={noticias} />
                     </section>
+                ) : isLoading ? (
+                    <div className="my-5 p-4 text-center">
+                        <Spinner
+                            animation="border"
+                            role="status"
+                            variant="primary"
+                        ></Spinner>
+                    </div>
                 ) : (
                     <TituloDeBusqueda />
                 )}
