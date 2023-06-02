@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Spinner } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import foto from "../assets/Image_not_available.png";
 
@@ -53,5 +53,12 @@ const CardNoticias = ({ noticias }) => {
         </>
     );
 };
+//  <div className="my-5 p-4 text-center">
+//       <Spinner
+//           animation="border"
+//           role="status"
+//           variant="primary"
+//       ></Spinner>
+//   </div>
 
 export default CardNoticias;

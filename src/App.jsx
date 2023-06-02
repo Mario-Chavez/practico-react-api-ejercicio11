@@ -11,23 +11,16 @@ const API_KEY = "8e50655ccb6b4e7a81dcf4926b6527bb";
 
 function App() {
     const [noticias, setNoticias] = useState([]);
-    const [mostrarSpiner, setMostrarSpiner] = useState(true);
-    const [titulo, setMostrarTitulo] = useState(true);
 
     useEffect(() => {}, [noticias]);
 
     const busquedaCategoria = async (category) => {
-        console.log(category);
-        category === undefined ? setMostrarTitulo(true) : setMostrarTitulo(false);
-
         try {
-            setMostrarSpiner(true);
             const resp = await fetch(
                 `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${API_KEY} `
             );
             const dato = await resp.json();
             setNoticias(dato.articles);
-            setMostrarSpiner(false);
         } catch (error) {
             console.log(error);
         }
@@ -39,19 +32,13 @@ function App() {
                 <h1 className="display-4 text-center">Practico ReactJS ejercicio 11</h1>
                 <hr />
                 <Buscador categoria={busquedaCategoria} />
-                {titulo === true ? <TituloDeBusqueda /> : ""}
-                {mostrarSpiner ? (
-                    <div className="my-5 p-4 text-center">
-                        <Spinner
-                            animation="border"
-                            role="status"
-                            variant="primary"
-                        ></Spinner>
-                    </div>
-                ) : (
+
+                {noticias.length > 0 ? (
                     <section className="row justify-content-evenly mt-5">
                         <CardNoticias noticias={noticias} />
                     </section>
+                ) : (
+                    <TituloDeBusqueda />
                 )}
             </Container>
             <footer className="bg-dark text-light text-center py-5">
