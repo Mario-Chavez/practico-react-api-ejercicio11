@@ -7,7 +7,10 @@ const CardNoticias = ({ noticias }) => {
     return (
         <>
             {noticias.map((naticias, index) => (
-                <Card key={index} className="my-3 cards col-lg-3 col-md-4 m-1 ">
+                <Card
+                    key={index}
+                    className="my-5 cards col-lg-3 col-md-4 m-1 shadow shadow-lg "
+                >
                     <Card.Body>
                         <div className="d-flex ">
                             <Card.Title className=" mx-auto">{naticias.title}</Card.Title>
@@ -27,12 +30,10 @@ const CardNoticias = ({ noticias }) => {
                                 />
                             )}
                             <Card.Text className="my-3">
-                                Description :{" "}
-                                <span className="p-1"> {naticias.description}</span>
+                                * <span className="p-1"> {naticias.description}</span>
                             </Card.Text>
                             <Card.Text className="my-3">
-                                Content :{" "}
-                                <span className="p-1"> {naticias.content} </span>
+                                * <span className="p-1"> {naticias.content} </span>
                             </Card.Text>
                         </div>
                     </Card.Body>

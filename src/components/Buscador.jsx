@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, FormControl, Button, Container } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { ArrowRight } from "react-bootstrap-icons";
 
@@ -16,7 +16,7 @@ const Buscador = ({ categoria }) => {
         reset();
     };
     return (
-        <Container className="container border p-2">
+        <Container className="container border p-2 mt-5 shadow shadow-lg">
             <Form
                 onSubmit={handleSubmit(onSubmit)}
                 className="row row g-0 text-center pt-2"

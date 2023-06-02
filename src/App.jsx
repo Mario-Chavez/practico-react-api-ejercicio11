@@ -26,7 +26,6 @@ function App() {
                 `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${API_KEY} `
             );
             const dato = await resp.json();
-            console.log(dato);
             setNoticias(dato.articles);
             setMostrarSpiner(false);
         } catch (error) {
