@@ -10,7 +10,7 @@ import TituloDeBusqueda from "./components/TituloDeBusqueda";
 const API_KEY = "8e50655ccb6b4e7a81dcf4926b6527bb";
 
 function App() {
-    const [noticias, setNoticias] = useState([]);
+    const [noticias, setNoticias] = useState([]) || [];
 
     useEffect(() => {}, [noticias]);
 
