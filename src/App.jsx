@@ -15,11 +15,11 @@ function App() {
 
     useEffect(() => {}, [noticias]);
 
-    const busquedaCategoria = async (category) => {
+    const busquedaCategoria = async (category, pais) => {
         try {
             setIsLoading(true);
             const resp = await fetch(
-                `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=${category} `
+                `https://newsdata.io/api/1/news?apikey=${API_KEY}&country=${pais}&category=${category} `
             );
             const dato = await resp.json();
 

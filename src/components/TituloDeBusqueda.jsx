@@ -5,7 +5,7 @@ const TituloDeBusqueda = () => {
         <Container className="container my-5">
             <Row className="p-4 text-center">
                 <Col>
-                    <h3>Busca la categoría de noticias que quieras ver</h3>
+                    <h3>Busca por pais y categoría de noticias que quieras ver</h3>
                 </Col>
             </Row>
         </Container>
