@@ -24,7 +24,7 @@ const CardNoticias = ({ noticias }) => {
                             </div>
                             <Card.Text className="d-flex justify-content-end text-danger">
                                 {" "}
-                                {naticias.author}
+                                {naticias.country[0]}
                             </Card.Text>
                             <hr />
                             <div className="my-4">
