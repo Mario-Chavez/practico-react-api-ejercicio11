@@ -10,7 +10,7 @@ import TituloDeBusqueda from "./components/TituloDeBusqueda";
 const API_KEY = "8e50655ccb6b4e7a81dcf4926b6527bb";
 
 function App() {
-    const [noticias, setNoticias] = useState([]) || [];
+    const [noticias, setNoticias] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {}, [noticias]);
@@ -22,8 +22,8 @@ function App() {
                 `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${API_KEY} `
             );
             const dato = await resp.json();
-
-            setNoticias(...noticias, dato.articles);
+            // console.log(dato);
+            setNoticias([...noticias, ...dato.articles]);
             setIsLoading(false);
         } catch (error) {
             console.log(error);
