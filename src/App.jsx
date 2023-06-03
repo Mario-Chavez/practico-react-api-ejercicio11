@@ -19,11 +19,9 @@ function App() {
         try {
             setIsLoading(true);
             const resp = await fetch(
-                // `https://newsapi.org/v2/top-headlines?category=&apiKey= `
                 `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=${category} `
             );
             const dato = await resp.json();
-            console.log(dato.results);
             setNoticias([...noticias, ...dato.results]);
             setIsLoading(false);
         } catch (error) {

@@ -36,6 +36,10 @@ const CardNoticias = ({ noticias }) => {
                                         className="mx-auto d-block"
                                     />
                                 )}
+                                <Card.Text className="d-flex mt-3 justify-content-star text-primary">
+                                    {" "}
+                                    Text in {naticias.language}
+                                </Card.Text>
                                 <Card.Text className="my-3">
                                     * <span className="p-1"> {naticias.description}</span>
                                 </Card.Text>
