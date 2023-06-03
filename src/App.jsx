@@ -7,7 +7,7 @@ import Buscador from "./components/Buscador";
 import CardNoticias from "./components/CardNoticias.jsx";
 import TituloDeBusqueda from "./components/TituloDeBusqueda";
 
-const API_KEY = "8e50655ccb6b4e7a81dcf4926b6527bb";
+const API_KEY = "pub_2392258230da6fa37c014d61d4b3ee5de65bf";
 
 function App() {
     const [noticias, setNoticias] = useState([]);
@@ -19,11 +19,12 @@ function App() {
         try {
             setIsLoading(true);
             const resp = await fetch(
-                `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${API_KEY} `
+                // `https://newsapi.org/v2/top-headlines?category=&apiKey= `
+                `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=${category} `
             );
             const dato = await resp.json();
-            // console.log(dato);
-            setNoticias([...noticias, ...dato.articles]);
+            // console.log(dato.results);
+            setNoticias([...noticias, ...dato.results]);
             setIsLoading(false);
         } catch (error) {
             console.log(error);

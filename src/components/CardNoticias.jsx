@@ -28,19 +28,25 @@ const CardNoticias = ({ noticias }) => {
                             </Card.Text>
                             <hr />
                             <div className="my-4">
-                                {!naticias.urlToImage ? (
+                                {!naticias.image_url ? (
                                     <Card.Img src={foto} className="mx-auto d-block" />
                                 ) : (
                                     <Card.Img
-                                        src={naticias.urlToImage}
+                                        src={naticias.image_url}
                                         className="mx-auto d-block"
                                     />
                                 )}
                                 <Card.Text className="my-3">
                                     * <span className="p-1"> {naticias.description}</span>
                                 </Card.Text>
-                                <Card.Text className="my-3">
-                                    * <span className="p-1"> {naticias.content} </span>
+                                <Card.Text className="my-3 text-truncate">
+                                    *{" "}
+                                    <span
+                                        className="p-1 d-inline-block text-truncate"
+                                        style={{ maxWidth: "200px" }}
+                                    >
+                                        {naticias.content}
+                                    </span>
                                 </Card.Text>
                             </div>
                         </Card.Body>
@@ -49,7 +55,7 @@ const CardNoticias = ({ noticias }) => {
                                 className="col-7 btn btn-outline-primary"
                                 variant=""
                                 onClick={() => {
-                                    window.open(naticias.url, "_blank");
+                                    window.open(naticias.link, "_blank");
                                 }}
                             >
                                 Ver Mas <ArrowRight />

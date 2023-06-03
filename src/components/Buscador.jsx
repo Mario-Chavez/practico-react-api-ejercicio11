@@ -29,13 +29,17 @@ const Buscador = ({ categoria }) => {
                 <div className="col-sm-6 col-md-8">
                     <Form.Group className="mb-3">
                         <Form.Select {...register("categoria")}>
-                            <option value="technology">technology</option>
-                            <option value="business">business</option>
-                            <option value="entertainment">entertainment</option>
-                            <option value="general">general</option>
-                            <option value="health">health</option>
-                            <option value="science">science</option>
-                            <option value="sport">sports</option>
+                            <option value="technology">Tecnologia</option>
+                            <option value="business">Negocios</option>
+                            <option value="entertainment">Entretenimiento</option>
+                            <option value="politics">Politica</option>
+                            <option value="top">Mas leidas</option>
+                            <option value="science">Ciencia</option>
+                            <option value="sports">Deportes</option>
+                            <option value="food">Comida</option>
+                            <option value="health">Salud</option>
+                            <option value="tourism">Turismo</option>
+                            <option value="world ">Noticias del mundo</option>
                         </Form.Select>
                     </Form.Group>
                 </div>
