@@ -22,7 +22,7 @@ function App() {
                 `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=${category} `
             );
             const dato = await resp.json();
-            console.log(dato.results);
+
             setNoticias([...dato.results]);
             setIsLoading(false);
         } catch (error) {
