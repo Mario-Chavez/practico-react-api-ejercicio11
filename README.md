@@ -27,7 +27,7 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 
 ## ¡Visita mi sitio Aqui!
 
-[Carga Tu Peli App](https://practico-react-ejercicio10.netlify.app)
+[Noticias](https://noticias-con-react.netlify.app/)
 
 ## Desarrollador
 
