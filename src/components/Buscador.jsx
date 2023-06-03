@@ -44,7 +44,7 @@ const Buscador = ({ categoria }) => {
                     </Form.Group>
                 </div>
                 <div className="d-flex justify-content-end">
-                    <Button type="submit" className="col-1">
+                    <Button type="submit" className="col-lg-1 ">
                         Buscar <ArrowRight />
                     </Button>
                 </div>
